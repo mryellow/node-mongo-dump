@@ -26,6 +26,7 @@ const dumpDb = ({
   port = '27017',
   uri = '',
   outPath = './../../dumps/',
+  compress = true,
   withStdout = false,
   withStderr = false,
   withClose = false,
@@ -71,6 +72,7 @@ const dumpDb = ({
 
       mongodump.on('close', (code) => {
         if (withClose) console.log(`child process exited with code ${code}`);
+        if (!compress) return resolve(fileDbPath);
 
         compressing.tar
           .compressDir(fileDbPath, `${fileDbPath}.tar`)

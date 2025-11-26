@@ -85,8 +85,9 @@ And then... That's it, you're ready to go 🚀
 | nbSaved    | false     | number  | `14`               | The number of dumps you want to keep. If you reach the nbSaved, it will delete the oldest before saving a new one. |
 | host       | false     | string  | `'localhost'`      | Your mongodb host.                                                                                                 |
 | port       | false     | string  | `'27017'`          | Your mongodb port.                                                                                                 |
-| uri        | false     | string  | `''`               | Your mongodb URI.                                                                                                 |
+| uri        | false     | string  | `''`               | Your mongodb URI.                                                                                                  |
 | outPath    | false     | string  | `'./../../dumps/'` | The directory where you want to save the dumps.                                                                    |
+| compress   | true      | boolean | `true`             | Tar and Gzip dump directory                                                                                        |
 | withStdout | false     | boolean | `false`            | Variable to log the output of mongodump command                                                                    |
 | withStderr | false     | boolean | `false`            | Variable to log the errors of mongodump command                                                                    |
 | withClose  | false     | boolean | `false`            | Variable to log the ouendtput of mongodump command              

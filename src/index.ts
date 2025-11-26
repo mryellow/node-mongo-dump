@@ -27,6 +27,7 @@ export = function nodeMongoDump ({
   port = '27017',
   uri = '',
   outPath = './../../dumps/',
+  compress = true,
   withStdout = false,
   withStderr = false,
   withClose = false,
@@ -39,6 +40,7 @@ export = function nodeMongoDump ({
       port,
       uri,
       outPath,
+      compress,
       withStdout,
       withStderr,
       withClose,
@@ -54,6 +56,7 @@ export = function nodeMongoDump ({
       port,
       uri,
       outPath,
+      compress,
     },
   ]);
   cron.schedule(frequency, dump);
