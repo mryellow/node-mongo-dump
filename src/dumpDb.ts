@@ -1,3 +1,4 @@
+// @ts-ignore
 import { spawn } from 'child_process';
 import * as fs from 'fs';
 import * as compressing from 'compressing';
