@@ -49,10 +49,10 @@ const dumpDb = ({
         `--db=${dbName}`,
       ];
       if (uri) {
-        options.uri = uri;
+        options.push(`--uri=${uri}`,);
       } else {
-        options.host = host;
-        options.port = port;
+        options.push(`--host=${host}`,);
+        options.push(`--port=${port}`,);
       }
 
       const mongodump = spawn('mongodump', options);
