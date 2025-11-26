@@ -1,4 +1,3 @@
-// @ts-ignore
 /**
  * Copyright (C) 2022 Dotmind
  * 

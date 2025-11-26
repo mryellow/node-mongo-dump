@@ -1,4 +1,3 @@
-// @ts-ignore
 import { spawn } from 'child_process';
 import * as fs from 'fs';
 import * as compressing from 'compressing';
@@ -49,10 +48,10 @@ const dumpDb = ({
         `--db=${dbName}`,
       ];
       if (uri) {
-        options.uri = uri;
+        options.uri = uri; // @ts-ignore
       } else {
-        options.host = host;
-        options.port = port;
+        options.host = host; // @ts-ignore
+        options.port = port; // @ts-ignore
       }
 
       const mongodump = spawn('mongodump', options);

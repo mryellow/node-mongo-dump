@@ -1,4 +1,3 @@
-// @ts-ignore
 import * as dumpDb from '../dumpDb';
 import * as fs from 'fs';
 
