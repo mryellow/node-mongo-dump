@@ -41,6 +41,7 @@ And then... That's it, you're Ready to go 🚀
 | nbSaved    | false     | number  | `14`               | The number of dumps you want to keep. If you reach the nbSaved, it will delete the oldest before saving a new one. |
 | host       | false     | string  | `'localhost'`      | Your mongodb host.                                                                                                 |
 | port       | false     | string  | `'27017'`          | Your mongodb port.                                                                                                 |
+| uri        | false     | string  | `''`               | Your mongodb URI.                                                                                                 |
 | outPath    | false     | string  | `'./../../dumps/'` | The directory where you want to save the dumps.                                                                    |
 | withStdout | false     | boolean | `false`            | Variable to log the output of mongodump command                                                                    |
 | withStderr | false     | boolean | `false`            | Variable to log the errors of mongodump command                                                                    |

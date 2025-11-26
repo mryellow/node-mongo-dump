@@ -23,6 +23,7 @@ const dumpDb = ({
   nbSaved = 14,
   host = 'localhost',
   port = '27017',
+  uri = '',
   outPath = './../../dumps/',
   withStdout = false,
   withStderr = false,
@@ -42,12 +43,18 @@ const dumpDb = ({
       const fileDbName = getFileName(dbName);
       const fileDbPath = path.join(fullPath, fileDbName);
 
-      const mongodump = spawn('mongodump', [
-        `--host="${host}"`,
-        `--port=${port}`,
+      const options = [
         `--out=${fileDbPath}`,
         `--db=${dbName}`,
-      ]);
+      ];
+      if (uri) {
+        options.uri = uri;
+      } else {
+        options.host = host;
+        options.port = port;
+      }
+
+      const mongodump = spawn('mongodump', options);
 
       if (withStdout) {
         mongodump.stdout.on('data', (data) => {

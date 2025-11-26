@@ -24,6 +24,7 @@ export = function nodeMongoDump ({
   nbSaved = 14,
   host = 'localhost',
   port = '27017',
+  uri = '',
   outPath = './../../dumps/',
   withStdout = false,
   withStderr = false,
@@ -35,6 +36,7 @@ export = function nodeMongoDump ({
       nbSaved,
       host,
       port,
+      uri,
       outPath,
       withStdout,
       withStderr,
@@ -49,6 +51,7 @@ export = function nodeMongoDump ({
       nbSaved,
       host,
       port,
+      uri,
       outPath,
     },
   ]);

@@ -35,6 +35,7 @@ dumpDb({
   dbName: 'dbName',
   host: 'localhost',
   port: '27017',
+  uri: '',
   nbSaved: 5,
   outPath: './dumps/',
   withStdout: false,
@@ -50,6 +51,7 @@ const file = await dumpDb({
   dbName: 'dbName',
   host: 'localhost',
   port: '27017',
+  uri: '',
   nbSaved: 5,
   outPath: './dumps/',
   withStdout: false,
@@ -69,6 +71,7 @@ And then... That's it, you're ready to go 🚀
 | nbSaved    | false     | number  | `14`               | The number of dumps you want to keep. If you reach the nbSaved, it will delete the oldest before saving a new one. |
 | host       | false     | string  | `'localhost'`      | Your mongodb host.                                                                                                 |
 | port       | false     | string  | `'27017'`          | Your mongodb port.                                                                                                 |
+| uri        | false     | string  | `''`               | Your mongodb URI.                                                                                                 |
 | outPath    | false     | string  | `'./../../dumps/'` | The directory where you want to save the dumps.                                                                    |
 | withStdout | false     | boolean | `false`            | Variable to log the output of mongodump command                                                                    |
 | withStderr | false     | boolean | `false`            | Variable to log the errors of mongodump command                                                                    |
@@ -82,6 +85,7 @@ And then... That's it, you're ready to go 🚀
 | nbSaved    | false     | number  | `14`               | The number of dumps you want to keep. If you reach the nbSaved, it will delete the oldest before saving a new one. |
 | host       | false     | string  | `'localhost'`      | Your mongodb host.                                                                                                 |
 | port       | false     | string  | `'27017'`          | Your mongodb port.                                                                                                 |
+| uri        | false     | string  | `''`               | Your mongodb URI.                                                                                                 |
 | outPath    | false     | string  | `'./../../dumps/'` | The directory where you want to save the dumps.                                                                    |
 | withStdout | false     | boolean | `false`            | Variable to log the output of mongodump command                                                                    |
 | withStderr | false     | boolean | `false`            | Variable to log the errors of mongodump command                                                                    |

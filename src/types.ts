@@ -4,6 +4,7 @@ export type Arguments = {
   nbSaved?: number;
   host?: string;
   port?: string;
+  uri?: string;
   outPath?: string;
   withStdout?: boolean;
   withStderr?: boolean;
